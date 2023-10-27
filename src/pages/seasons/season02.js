@@ -1,6 +1,18 @@
 /* chakra content */
 import { Button, Flex, Img, Text, Box } from "@chakra-ui/react"; /* */
 
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverAnchor,
+} from "@chakra-ui/react";
+
 import React from "react";
 
 export default function S02() {
@@ -41,15 +53,39 @@ export default function S02() {
 
         <Flex mt="20px">
           <Button
-            borderColor={"#D6D6D6"}
             pl="60px"
             pr="60px"
+            mr="10px"
             borderRadius={"20px"}
             border={"1px"}
-            bgColor={"transparent"}
+            borderColor={"#D6D6D6"}
+            background={"transparent"}
           >
             E-mail
           </Button>
+
+          <Popover>
+            <PopoverTrigger>
+              <Button
+                borderRadius={"100%"}
+                border={"1px"}
+                borderColor={"#D6D6D6"}
+                background={"transparent"}
+                pb="6px"
+                fontWeight={"bold"}
+              >
+                ...
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent>
+              <PopoverArrow />
+              <PopoverCloseButton />
+              <PopoverHeader>Confirmation!</PopoverHeader>
+              <PopoverBody>
+                Are you sure you want to have that milkshake?
+              </PopoverBody>
+            </PopoverContent>
+          </Popover>
         </Flex>
       </Flex>
     </>

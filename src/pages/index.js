@@ -1,4 +1,4 @@
-import { Button, Flex, Text } from "@chakra-ui/react";
+import { Button, Flex, Text, Img, Box } from "@chakra-ui/react";
 
 import React from "react";
 
@@ -39,6 +39,14 @@ export default function Index() {
       </Flex>
 
       <Works />
+
+      <Flex alignItems={"center"} justify={"center"}>
+        <Box h="1px" w="50%" bg="#D9D9D9"></Box>
+
+        <Img w="60px" m="10px" src="/icons/foto.png" />
+
+        <Box h="1px" w="50%" bg="#D9D9D9"></Box>
+      </Flex>
     </>
   );
 }
