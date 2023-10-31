@@ -41,14 +41,15 @@ export default function S01() {
                                         fontSize={"20px"}
                                         fontWeight={"bold"}
                                     >
-                                        Por que Design?
+                                        Quais tecnologias você manja?
                                     </Box>
                                     <AccordionIcon />
                                 </AccordionButton>
                             </h2>
                             <AccordionPanel pb={4}>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Eum officia illum dicta in, cum maxime ipsa, sequi natus optio quod molestias.
+                            No UX design, utilizo ferramentas como Figma, 
+                            Sketch e Adobe XD. Como programador front-end, trabalho com HTML, 
+                            CSS e JavaScript, além de frameworks como React e Angular.
                             </AccordionPanel>
                         </AccordionItem>
                     </Accordion>
