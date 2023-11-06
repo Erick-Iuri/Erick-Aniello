@@ -2,6 +2,8 @@ import { Flex, Text, Img, Box, Button, Link } from "@chakra-ui/react";
 
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 
+import { Grid, GridItem } from "@chakra-ui/react";
+
 import React from "react";
 
 import { motion } from "framer-motion";
@@ -55,7 +57,7 @@ export default function Works() {
             {/* Projetos "INICIO" */}
             <TabPanel>
               <Flex
-                justify={"space-between"}
+                gap="3"
                 direction={{
                   base: "column",
                   sm: "column",
@@ -63,89 +65,44 @@ export default function Works() {
                   lg: "column",
                   xl: "row",
                 }}
-                gap={6}
-                align={"center"}
-                mb="40px"
               >
-                <Box
-                  w="600px"
-                  h="300px"
-                  bg={"#12131A"}
-                  borderRadius={"10px"}
-                  // @ts-ignore
-                  align={"center"}
-                  cursor={"pointer"}
-                >
-                  <Img w="400px" h="300px" src="/icons/Trabalho 1.png" />
+                <Flex w="100%" h="400" bg="blue.500" direction={"column"}>
+                  <Flex bg="#12131A" h="100%" w="100%"></Flex>
 
-                  <Flex justify={"space-between"}>
-                    <Flex mt="3px" align={"center"}>
-                      <Img src="/icons/blue ball.png" w="20px" h="20px" mr="10px" />
-                      <Text>Lorem Ipsulem out of perez</Text>
-                    </Flex>
+                  <Flex 
+                  h="100px" 
+                  w="100%" 
+                  bg="#F1F1F1" 
+                  fontSize={"13px"}
+                  p="10px"
+                  direction={"column"}>
+                    
+                    <Text fontWeight={"bold"}>Lorem Ipsulem</Text>
+                    <Text>Lorem Ipsulem requea kewq sksne asde0w aisjda fefeuwak efiedpaui</Text>
 
-                    <Flex align={"center"}>
-                      <Img src="/icons/blackHeart.png" w="15px" h="15px" />
-                    </Flex>
                   </Flex>
-                </Box>
+                </Flex>
 
-                <Box
-                w="600px" 
-                h="300px" 
-                bg={"#D9D9D9"} 
-                borderRadius={"10px"}
-                
-                // @ts-ignore
-                align={"center"}
-                cursor={"pointer"}
-                >
-{/* 
-                  <Img w="400px" h="300px"  />
+                <Flex w="100%" h="400" bg="blue.500" direction={"column"}>
+                  <Flex bg="#FFCA00" h="100%" w="100%"></Flex>
+                  <Flex h="100px" w="100%" bg="#F1F1F1"></Flex>
+                </Flex>
 
-                  <Flex justify={"space-between"}>
-                    <Flex mt="3px" align={"center"}>
-                      <Img src="/icons/foto.png" w="25px" h="25px" mr="10px" />
-                      <Text>Lorem Ipsulem out of perez</Text>
-                    </Flex>
-
-                    <Flex align={"center"}>
-                      <Img src="/icons/blackHeart.png" w="15px" h="15px" />
-                    </Flex>
-                  </Flex> */}
-
-                </Box>
-
-              </Flex>
-
-              <Flex
-                justify={"space-between"}
-                direction={{
-                  base: "column",
-                  sm: "column",
-                  md: "column",
-                  lg: "column",
-                  xl: "row",
-                }}
-                gap={2}
-                align={"center"}
-              >
-                <Box w="600px" h="300px" bg={"#12131A"} borderRadius={"10px"}>
-                  {" "}
-                </Box>
-
-                <Box w="600px" h="300px" bg={"#D9D9D9"} borderRadius={"10px"}>
-                  {" "}
-                </Box>
+                <Flex w="100%" h="400" bg="blue.500" direction={"column"}>
+                  <Flex bg="#4B40DA" h="100%" w="100%"></Flex>
+                  <Flex h="100px" w="100%" bg="#F1F1F1"></Flex>
+                </Flex>
               </Flex>
             </TabPanel>
             {/* Projetos "FIM" */}
 
+            {/* Icons "INICIO" */}
             <TabPanel>
               <p>two!</p>
             </TabPanel>
+            {/* Icons "FIM" */}
 
-            {/* Sobre Menu */}
+            {/* Sobre Menu "INICIO" */}
             <TabPanel>
               <Flex gap={1}>
                 <Flex>
@@ -315,27 +272,10 @@ export default function Works() {
 
               {/* Area de Habilidades "FIM" */}
             </TabPanel>
+            {/* Sobre Menu "FIM" */}
           </TabPanels>
         </Tabs>
       </Flex>
     </>
   );
-}
-
-{
-  /* <Flex
-                    _hover={{ opacity: "100%" }}
-                    transition={"0.3s"}
-                    cursor={"pointer"}
-                    opacity={"0%"}
-                    bg="linear-gradient(180deg, rgba(18, 19, 26, 0.00) 0%, rgba(0, 0, 0, 0.35) 100%)"
-                    h="100%"
-                    align={"end"}
-                    justify="space-between"
-                  >
-                    <Text fontSize={20} color={"white"}>
-                      Lorem Ipsulem out of perez
-                    </Text>
-                    <Img src="/icons/heart2.png" w="20px" h="20px" />
-                  </Flex> */
 }

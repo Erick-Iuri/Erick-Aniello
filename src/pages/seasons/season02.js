@@ -60,6 +60,17 @@ export default function S02() {
             border={"1px"}
             borderColor={"#D6D6D6"}
             background={"transparent"}
+            _hover={{
+              background:"#4B40DA",
+              color:"white",
+              transition:"0,90ms",
+              borderColor: "#4B40DA",
+            }}
+            _active={{
+              background:"black",
+              color:"white",
+              borderColor: "black",
+            }}
           >
             E-mail
           </Button>
@@ -73,6 +84,17 @@ export default function S02() {
                 background={"transparent"}
                 pb="6px"
                 fontWeight={"bold"}
+                _hover={{
+                  background:"#4B40DA",
+                  color:"white",
+                  transition:"0,90ms",
+                  borderColor: "#4B40DA"
+                }}
+                _active={{
+                  background:"black",
+                  color:"white",
+                  borderColor: "black",
+                }}
               >
                 ...
               </Button>

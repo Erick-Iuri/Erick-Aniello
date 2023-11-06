@@ -20,33 +20,35 @@ import Works from "./seasons/Trabalhos";
 export default function Index() {
   return (
     <>
-      <Navbar />
+      <Box>
+        <Navbar />
 
-      <Flex
-        justify={"center"}
-        mt="30px"
-        direction={{
-          base: "column",
-          sm: "column",
-          md: "column",
-          lg: "column",
-          xl: "row",
-        }}
-      >
-        <S02 />
+        <Flex
+          justify={"center"}
+          mt="30px"
+          direction={{
+            base: "column",
+            sm: "column",
+            md: "column",
+            lg: "column",
+            xl: "row",
+          }}
+        >
+          <S02 />
 
-        <S01 />
-      </Flex>
+          <S01 />
+        </Flex>
 
-      <Works />
+        <Works />
 
-      <Flex alignItems={"center"} justify={"center"}>
-        <Box h="1px" w="50%" bg="#D9D9D9"></Box>
+        <Flex alignItems={"center"} justify={"center"}>
+          <Box h="1px" w="50%" bg="#D9D9D9"></Box>
 
-        <Img w="60px" m="10px" src="/icons/foto.png" />
+          <Img w="60px" m="10px" src="/icons/foto.png" />
 
-        <Box h="1px" w="50%" bg="#D9D9D9"></Box>
-      </Flex>
+          <Box h="1px" w="50%" bg="#D9D9D9"></Box>
+        </Flex>
+      </Box>
     </>
   );
 }
