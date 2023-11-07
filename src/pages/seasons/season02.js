@@ -58,11 +58,12 @@ export default function S02() {
             mr="10px"
             borderRadius={"20px"}
             border={"1px"}
-            borderColor={"#D6D6D6"}
-            background={"transparent"}
+            color={"white"}
+            borderColor={"#4B40DA"}
+            background={"#4B40DA"}
             _hover={{
-              background:"#4B40DA",
-              color:"white",
+              background:"transparent",
+              color:"black",
               transition:"0,90ms",
               borderColor: "#4B40DA",
             }}
@@ -102,9 +103,9 @@ export default function S02() {
             <PopoverContent>
               <PopoverArrow />
               <PopoverCloseButton />
-              <PopoverHeader>Confirmation!</PopoverHeader>
+              <PopoverHeader></PopoverHeader>
               <PopoverBody>
-                Are you sure you want to have that milkshake?
+                Clicar no botão "E-mail" vai fazer seu E-mail abrir como em um truque de mágica! 🎩🪄
               </PopoverBody>
             </PopoverContent>
           </Popover>

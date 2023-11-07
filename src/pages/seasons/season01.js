@@ -15,15 +15,15 @@ import React from "react";
 export default function S01() {
   return (
     <>
-      <Flex justify={"center"}>
-        <Flex pt="30px" direction={"column"} fontSize={"20px"} w="500px">
-          <Flex direction={"column"} fontSize={"20px"} textAlign={"center"}>
-            <Text mb="30px" fontWeight={"light"}>
-              Aqui estão as perguntas mais frequentes. 😊
+      <Flex justify={"center"} >
+        <Flex pt="30px" direction={"column"} fontSize={"16px"} w={{sm:"100%", xl:"500px"}} >
+          <Flex direction={"column"} textAlign={"start"}>
+            <Text mb="30px" fontWeight={"bold"}>
+              Aqui estão algumas dúvidas que você pode ter.😊
             </Text>
           </Flex>
 
-          <Accordion allowToggle defaultIndex={[0]}>
+          <Accordion allowToggle>
             <AccordionItem border={"none"}>
               <h2>
                 <AccordionButton
@@ -38,7 +38,7 @@ export default function S01() {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize={"20px"}
+                    fontSize={"16px"}
                     fontWeight={"bold"}
                   >
                     Pode me mostrar algum trabalho seu?
@@ -47,8 +47,11 @@ export default function S01() {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Text>Claro, preparei um projeto especialmente pra você conhecer
-                melhor como funciona meu fluxo de trabalho. 👉 <Link color={"#4B40DA"}>Click Aqui.</Link>👈"</Text>
+                <Text>
+                  Claro, preparei um projeto especialmente pra você conhecer
+                  melhor como funciona meu fluxo de trabalho. 👉{" "}
+                  <Link color={"#4B40DA"}>Click Aqui.</Link>👈"
+                </Text>
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
@@ -65,7 +68,7 @@ export default function S01() {
                   }}
                   fontWeight={"bold"}
                 >
-                  <Box as="span" flex="1" textAlign="left" fontSize={"20px"}>
+                  <Box as="span" flex="1" textAlign="left" fontSize={"16px"}>
                     Quais tipos de problema você resolve?
                   </Box>
                   <AccordionIcon />
@@ -92,17 +95,13 @@ export default function S01() {
                   }}
                   fontWeight={"bold"}
                 >
-                  <Box as="span" flex="1" textAlign="left" fontSize={"20px"}>
+                  <Box as="span" flex="1" textAlign="left" fontSize={"16px"}>
                     Como saber programar ajuda você com o UX Design?
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <AccordionPanel pb={4}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
-                officia illum dicta in, cum maxime ipsa, sequi natus optio quod
-                molestias.
-              </AccordionPanel>
+              <AccordionPanel pb={4}></AccordionPanel>
             </AccordionItem>
           </Accordion>
         </Flex>

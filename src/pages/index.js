@@ -36,7 +36,21 @@ export default function Index() {
         >
           <S02 />
 
-          <S01 />
+          <Flex 
+          mt="50px"
+          mr="10px"
+          ml="10px"
+          justify={"center"}>
+            <Box
+            borderRadius={"30px"}
+            bg="#12131A" 
+            >
+                <Img
+                borderRadius={"30px"}
+                w="500px" 
+                src="/icons/Trabalho 1.png" />
+            </Box>
+          </Flex>
         </Flex>
 
         <Works />
