@@ -180,7 +180,6 @@ export default function Navbar2() {
               mr="20px"
               border={"2px"}
               borderRadius={"20px"}
-              
               p="30px"
               direction={"column"}
             >
@@ -214,8 +213,7 @@ export default function Navbar2() {
                   </h2>
                   <AccordionPanel pb={4}>
                     Claro, preparei um projeto especialmente pra você conhecer
-                    melhor como funciona meu fluxo de trabalho. 👉 Click
-                    Aqui.👈"
+                    melhor como funciona meu fluxo de trabalho. 👉 <Link color="blue">Click Aqui.</Link>👈
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -263,112 +261,116 @@ export default function Navbar2() {
                     </AccordionButton>
                   </h2>
                   <AccordionPanel pb={4}>
-                    Claro, preparei um projeto especialmente pra você conhecer
-                    melhor como funciona meu fluxo de trabalho. 👉 Click
-                    Aqui.👈"
+                    Comecei a programar há dois anos, aprendendo de forma
+                    autodidata por meio de cursos online e videoaulas. Durante
+                    minha jornada, busquei a orientação de amigos programadores
+                    para aprimorar minhas habilidades. Ainda estou dedicado a
+                    evoluir nesse caminho, sempre em busca de aprendizado e
+                    melhoria constante.
                   </AccordionPanel>
                 </AccordionItem>
-
               </Accordion>
             </Flex>
 
-            <Flex 
-            mt="20px"
-            h="200px">
-
-                <Flex
+            <Flex mt="20px" h="200px" justify={"center"}>
+              <Flex
                 justify={"center"}
                 p={"30px"}
                 w="100%"
                 mr="20px"
                 borderRadius={"20px"}
                 border={"2px"}
-                direction={"column"}>
+                direction={"column"}
+              >
+                <Text 
+                textAlign={"center"}
+                fontSize={"20px"} 
+                fontWeight={"bold"} 
+                mb="20px">
+                  Social
+                </Text>
 
-                    <Text
-                    fontSize={"20px"}
-                    fontWeight={"bold"}
-                    mb="20px"
-                    >Social</Text>
-
-                    <Flex mb="20px">
-                      <Img w="20px" h="20px" mr="20px" src="/icons/github.png" />
-                      <Text>https://github.com/Erick-Iuri</Text>
-                    </Flex>
-
-                    <Flex mb="20px">
-                      <Img w="20px" h="20px" mr="20px" src="/icons/logo In white 1.png" />
-                      <Text>https://www.linkedin.com/erick-aniello</Text>
-                    </Flex>
-
-                    <Flex>
-                      <Img w="20px" h="15px" mr="20px" mt="3px" src="/icons/E-mail.png" />
-                      <Text>iurierick@gmail.com</Text>
-                    </Flex>
-
+                <Flex mb="20px">
+                  
+                    <Img w="20px" h="20px" mr="20px" src="/icons/github.png" />
+                    <Link href="https://github.com/Erick-Iuri" target="_blank">
+                    <Text>https://github.com/Erick-Iuri</Text>
+                     </Link>
                 </Flex>
-            </Flex>
-            
-            
 
+                <Flex mb="20px">
+                  <Img
+                    w="20px"
+                    h="20px"
+                    mr="20px"
+                    src="/icons/logo In white 1.png"
+                  />
+                  <Link href="https://www.linkedin.com/in/erick-aniello-49953b163/" target="_blank">
+                  <Text>https://www.linkedin.com/erick-aniello</Text>
+                  </Link>
+                </Flex>
+
+                <Flex>
+                  <Img
+                    w="20px"
+                    h="15px"
+                    mr="20px"
+                    mt="3px"
+                    src="/icons/E-mail.png"
+                  />
+                  <Text>iurierick@gmail.com</Text>
+                </Flex>
+              </Flex>
+            </Flex>
           </Flex>
 
           {/* Coluna 2 */}
           <Flex direction={"column"} w="50%">
-
             <Flex h="400px" mb="20px">
-
               <Img src="/icons/image.png" />
-
             </Flex>
 
             <Flex>
-
               <Flex
-              p={"30px"}
-               borderRadius={"20px"}
-               border={"2px"}
-               direction={"column"}>
+                p={"30px"}
+                borderRadius={"20px"}
+                border={"2px"}
+                direction={"column"}
+              >
+                <Text fontSize={"20px"} fontWeight={"bold"} mb="20px">
+                  Habilidades
+                </Text>
 
-                  <Text
-                  fontSize={"20px"}
-                  fontWeight={"bold"}
-                  mb="20px"
-                  >Habilidades</Text>
-
-                  <Flex>
-                    <Img src="/icons/Group 32.png" />
-                  </Flex>
-
+                <Flex>
+                  <Img src="/icons/Group 32.png" />
+                </Flex>
               </Flex>
-
             </Flex>
-
           </Flex>
         </Flex>
       </Flex>
 
       {/* Linha Decorativa "Fim" */}
       <Flex justify={"center"}>
-        <Flex
-        m="20px"
-        w="1400px"
-        justify={"space-between"}
-        >
+        <Flex m="20px" w="1400px" justify={"space-between"}>
           <Box
-          mt="17px"
-          border={"1px"} borderColor={"#D9D9D9"} borderRadius={"100%"}
-          h={"1px"}
-          w="100%"
+            mt="17px"
+            border={"1px"}
+            borderColor={"#D9D9D9"}
+            borderRadius={"100%"}
+            h={"1px"}
+            w="100%"
           ></Box>
 
-          <Img mx="20px" w="40px" src="/icons/foto.png" /> 
+          <Img mx="20px" w="40px" src="/icons/foto.png" />
 
           <Box
-          mt="17px"
-          border={"1px"} borderColor={"#D9D9D9"} borderRadius={"100%"}
-          h={"1px"}
-          w="100%"
+            mt="17px"
+            border={"1px"}
+            borderColor={"#D9D9D9"}
+            borderRadius={"100%"}
+            h={"1px"}
+            w="100%"
           ></Box>
         </Flex>
       </Flex>

@@ -13,6 +13,7 @@ import {
   PopoverCloseButton,
   PopoverAnchor,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 export default function S01() {
   return (
@@ -54,6 +55,7 @@ export default function S01() {
               <Img src="/icons/Arrow 1.png" w="40px" />
 
               <Flex align={"center"}>
+                <Link href="mailto:iurierick@gmail.com">
                 <Button
                   mt="20px"
                   fontSize={"14px"}
@@ -75,7 +77,7 @@ export default function S01() {
                 >
                   E-mail
                 </Button>
-
+                </Link>
                 <Flex pt="20px" >
                   <Popover >
                     <PopoverTrigger >
