@@ -51,7 +51,7 @@ export default function T02() {
       <Modal isOpen={isOpen} onClose={onClose} size={"6xl"}>
         <ModalOverlay />
 
-        <ModalContent borderRadius={"10px"} h="2300px">
+        <ModalContent borderRadius={"10px"} h="auto">
           <ModalCloseButton />
 
           {/* Conteúdo */}
