@@ -68,7 +68,8 @@ export default function Navbar2() {
                 Projetos
               </Button>
             </Link>
-
+              
+            <Link href="/icons">
             <Button
               fontSize={"14px"}
               fontWeight={"bold"}
@@ -87,7 +88,7 @@ export default function Navbar2() {
               }}
             >
               Icons
-            </Button>
+            </Button></Link>  
 
             <Link href="/sobre">
               <Button

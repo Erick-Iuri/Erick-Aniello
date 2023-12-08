@@ -5,7 +5,7 @@ import React from "react";
 /* Hamburguer menu */
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 
-export default function Navbar() {
+export default function Navbaricons() {
   return (
     <>
       <Flex justify={"center"}>
@@ -29,13 +29,14 @@ export default function Navbar() {
             gap={6}
             display={{ base: "none", sm: "none", md: "flex" }}
           >
+            <Link href="/">
             <Button
               fontSize={"14px"}
               h="30px"
               pl="40px"
               pr="40px"
               borderRadius={"30px"}
-              bg="#006EF5"
+              bg="black"
               color="white"
               fontWeight={"bold"}
               transition={"0,5s"}
@@ -48,6 +49,7 @@ export default function Navbar() {
             >
               Projetos
             </Button>
+            </Link>
 
             <Link href="/icons">
             <Button
@@ -57,7 +59,7 @@ export default function Navbar() {
               pl="40px"
               pr="40px"
               borderRadius={"30px"}
-              bg="black"
+              bg="#006EF5"
               color="white"
               transition={"0,5s"}
               _hover={{
@@ -112,6 +114,11 @@ export default function Navbar() {
             </Menu>
           </Flex>
         </Flex>
+      </Flex>
+
+      <Flex h="600px" justify={"center"} align={"center"} direction={"column"}>
+          <Text fontSize={"60px"}>404</Text>
+          <Img src="/icons/bugcat-bugcatsticker.gif" />
       </Flex>
     </>
   );
