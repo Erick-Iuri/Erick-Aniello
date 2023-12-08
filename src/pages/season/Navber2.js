@@ -10,6 +10,8 @@ import {
 
 import React from "react";
 
+import T02 from "./Trabalhos/linespace";
+
 /* Hamburguer menu */
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 
@@ -150,16 +152,17 @@ export default function Navbar2() {
           m="20px"
           w="1400px"
           fontFamily={"Roboto"}
-          justify={"space-between"}
+          justify={{base:"center", md:"center", xl:"space-between"}}
+          direction={{base:"column", md:"column", xl:"row"}}
         >
           {/* Coluna 1 */}
-          <Flex direction={"column"} w="50%">
+          <Flex direction={"column"} w={{base:"100%", md:"100%", xl:"50%"}}>
             <Flex
               mr="20px"
               h="200px"
               direction={"column"}
               border={"2px"}
-              borderRadius={"20px"}
+              borderRadius={"10px"}
               justify={"center"}
               align={"center"}
               p="30px"
@@ -179,7 +182,7 @@ export default function Navbar2() {
               mt="20px"
               mr="20px"
               border={"2px"}
-              borderRadius={"20px"}
+              borderRadius={"10px"}
               p="30px"
               direction={"column"}
             >
@@ -205,15 +208,14 @@ export default function Navbar2() {
                       border={"none"}
                     >
                       <Box as="span" flex="1" textAlign="left">
-                        Pode me mostrar algum trabalho seu?
+                        Como você converte pesquisa de usuários para criar soluções de design?
                       </Box>
 
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
                   <AccordionPanel pb={4}>
-                    Claro, preparei um projeto especialmente pra você conhecer
-                    melhor como funciona meu fluxo de trabalho. 👉 <Link color="blue">Click Aqui.</Link>👈
+                  Para transformar a pesquisa de usuários em soluções de design, é essencial compreender profundamente os insights e integrá-los no processo de design, priorizando as necessidades dos usuários.
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -278,7 +280,7 @@ export default function Navbar2() {
                 p={"30px"}
                 w="100%"
                 mr="20px"
-                borderRadius={"20px"}
+                borderRadius={"10px"}
                 border={"2px"}
                 direction={"column"}
               >
@@ -325,15 +327,22 @@ export default function Navbar2() {
           </Flex>
 
           {/* Coluna 2 */}
-          <Flex direction={"column"} w="50%">
-            <Flex h="400px" mb="20px">
-              <Img src="/icons/image.png" />
+          <Flex direction={"column"} w={{base:"100%", md:"100%", xl:"50%"}}>
+            <Flex h="400px" mb="20px" mt="20px"
+              borderRadius={"10px"}
+              bgImage="/Line Space Design/Cover Line space.jpg"
+              bgRepeat={"none"}
+              bgPosition={"center"}
+              bgSize={"cover"}
+              cursor="pointer">
+              <T02 />
             </Flex>
 
             <Flex>
               <Flex
                 p={"30px"}
-                borderRadius={"20px"}
+                borderRadius={"10px"}
+                w={{base:"100%", md:"100%", xl:"50%"}}
                 border={"2px"}
                 direction={"column"}
               >

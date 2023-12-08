@@ -43,7 +43,12 @@ export default function S02() {
 
           {/* Trabalhos */}
 
-          <Flex justify={"center"} gap={3} m="20px" direction={{xl:"row", md:"column", base:"column" }} >
+          <Flex
+            justify={"center"}
+            gap={3}
+            m="20px"
+            direction={{ xl: "row", md: "column", base: "column" }}
+          >
             {/* Ubisoft Projeto */}
             <Flex
               w="100%"
@@ -97,6 +102,7 @@ export default function S02() {
 
                   {/* Conteúdo */}
                   <ModalBody>
+                    {/*💬*/}
                     <Flex mb="10px" ml="55px" justify={"start"}>
                       <Flex mt="100px">
                         <Flex mb="10px">
@@ -117,6 +123,7 @@ export default function S02() {
                       </Flex>
                     </Flex>
 
+                    {/*📷*/}
                     <Flex justify={"center"}>
                       <Box
                         bgImage={"/Projeto fim/cover 1.jpg"}
@@ -128,14 +135,14 @@ export default function S02() {
                       ></Box>
                     </Flex>
 
-                    <Flex mb="10px" w="100%" justify={"center"}>
-                      <Flex w="60%" ml="55px" mt="10px">
-                        <Flex mb="10px">
+                    {/*💬*/}
+                    <Flex mb="10px" justify={"center"}> 
+                      <Flex w="70%" mt="10px" mb="10px">
                           <Flex direction={"column"} justify={"center"}>
                             <Text
                               mt="14px"
                               fontSize={"19px"}
-                              textAlign={"start"}
+                              textAlign={"center"}
                               fontWeight={"bold"}
                               color="black"
                             >
@@ -146,7 +153,7 @@ export default function S02() {
                             <Text
                               mt="20px"
                               fontSize={"17px"}
-                              textAlign={"start"}
+                              textAlign={"center"}
                               color="black"
                             >
                               Esse projeto foi uma iniciativa pessoal, para
@@ -159,10 +166,10 @@ export default function S02() {
                               aprimoramento do Ubisoft Connect.
                             </Text>
                           </Flex>
-                        </Flex>
                       </Flex>
                     </Flex>
 
+                    {/*📷*/}
                     <Flex justify={"center"}>
                       <Box
                         bgImage={"/Projeto fim/Biblioteca 1.png"}
@@ -174,6 +181,7 @@ export default function S02() {
                       ></Box>
                     </Flex>
 
+                    {/*💬*/}
                     <Flex mb="10px" w="100%" justify={"center"}>
                       <Flex w="60%" ml="55px" mt="10px">
                         <Flex mb="10px">
@@ -181,7 +189,7 @@ export default function S02() {
                             <Text
                               mt="14px"
                               fontSize={"19px"}
-                              textAlign={"start"}
+                              textAlign={"center"}
                               fontWeight={"bold"}
                               color="black"
                             >
@@ -239,7 +247,7 @@ export default function S02() {
                         </Flex>
                       </Flex>
                     </Flex>
-
+                    {/*📷*/}
                     <Flex justify={"center"}>
                       <Box
                         bgImage={"/Projeto fim/wireframe.png"}
@@ -251,6 +259,7 @@ export default function S02() {
                       ></Box>
                     </Flex>
 
+                    {/*💬*/}
                     <Flex mb="10px" w="100%" justify={"center"}>
                       <Flex w="60%" ml="55px" mt="10px">
                         <Flex mb="10px">
@@ -258,7 +267,7 @@ export default function S02() {
                             <Text
                               mt="14px"
                               fontSize={"19px"}
-                              textAlign={"start"}
+                              textAlign={"center"}
                               fontWeight={"bold"}
                               color="black"
                             >
@@ -268,7 +277,7 @@ export default function S02() {
                             <Text
                               mt="20px"
                               fontSize={"17px"}
-                              textAlign={"start"}
+                              textAlign={"center"}
                               color="black"
                             >
                               O processo de Redesign envolveu várias etapas,
@@ -283,7 +292,7 @@ export default function S02() {
                         </Flex>
                       </Flex>
                     </Flex>
-
+                    {/*📷*/}
                     <Flex justify={"center"}>
                       <Box
                         bgImage={"/Projeto fim/Perfil.png"}
@@ -295,6 +304,7 @@ export default function S02() {
                       ></Box>
                     </Flex>
 
+                    {/*📷*/}
                     <Flex justify={"center"} mt="20px">
                       <Box
                         bgImage={"/Projeto fim/Biblioteca.png"}
@@ -306,6 +316,7 @@ export default function S02() {
                       ></Box>
                     </Flex>
 
+                    {/*💬*/}
                     <Flex mb="10px" w="100%" justify={"center"}>
                       <Flex w="60%" ml="55px" mt="10px">
                         <Flex mb="10px">
@@ -313,7 +324,7 @@ export default function S02() {
                             <Text
                               mt="14px"
                               fontSize={"19px"}
-                              textAlign={"start"}
+                              textAlign={"center"}
                               fontWeight={"bold"}
                               color="black"
                             >
@@ -323,7 +334,7 @@ export default function S02() {
                             <Text
                               mt="20px"
                               fontSize={"17px"}
-                              textAlign={"start"}
+                              textAlign={"center"}
                               color="black"
                             >
                               Em resumo, este Redesign do Ubisoft Connect
@@ -356,18 +367,22 @@ export default function S02() {
             </Flex>
 
             {/* Line Space Projeto */}
-            <Flex w="100%" h="400px" bg="black" borderRadius={"10px"}  bgImage="/Line Space Design/Cover Line space.jpg"
-            bgRepeat={"none"}
-            bgPosition={"center"}
-            bgSize={"cover"}
-            cursor="pointer">
-
+            <Flex
+              w="100%"
+              h="400px"
+              bg="black"
+              borderRadius={"10px"}
+              bgImage="/Line Space Design/Cover Line space.jpg"
+              bgRepeat={"none"}
+              bgPosition={"center"}
+              bgSize={"cover"}
+              cursor="pointer"
+            >
               <Flex w="100%">
                 <T02 />
               </Flex>
 
               {/* Modal menu para Line Space Project*/}
-              
             </Flex>
           </Flex>
         </Flex>
