@@ -51,13 +51,12 @@ export default function T02() {
       <Modal isOpen={isOpen} onClose={onClose} size={"6xl"}>
         <ModalOverlay />
 
-        <ModalContent borderRadius={"10px"} h="100%">
+        <ModalContent borderRadius={"10px"} h="2300px">
           <ModalCloseButton />
 
           {/* Conteúdo */}
           <ModalBody>
-
-            {/* Header Titulo e foto */}
+            {/* Header 📷💬 */}
             <Flex mb="10px" ml="55px" justify={"start"}>
               <Flex mt="100px">
                 <Flex mb="10px">
@@ -71,7 +70,7 @@ export default function T02() {
               </Flex>
             </Flex>
 
-            {/* Primeira imagem */}
+            {/*📷*/}
             <Flex justify={"center"}>
               <Box
                 bgImage={"/Line Space Design/Cover Line space.jpg"}
@@ -82,6 +81,55 @@ export default function T02() {
                 h="500px"
               ></Box>
             </Flex>
+
+            {/*💬*/}
+            <Flex justify={"center"} mt="20px">
+              <Text w="80%" fontSize={"20px"} textAlign={"center"}>
+                A <b>Line Space</b> foi meu projeto pessoal de empreendedorismo,
+                nossa principal missão era levar o poder do design para pequenos
+                negócios.
+              </Text>
+            </Flex>
+
+            {/*💬*/}
+            <Flex justify={"center"} mt="60px">
+              <Text w="80%" fontSize={"20px"} textAlign={"center"}>
+                Lembro-me com carinho do nosso primeiro cliente, que estava
+                buscando uma logo design para sua vidraçaria. Trabalhamos muito
+                para trazer ao design tudo o que melhor representava seu negocio
+                e seus valores.
+              </Text>
+            </Flex>
+
+            {/*📷*/}
+            <Flex justify={"center"}>
+              <Box w="100%" >
+                <Img src="/Line Space Design/Group 63(1).png" />
+              </Box>
+            </Flex>
+
+            {/*💬*/}
+            <Flex justify={"center"}>
+              <Text w="80%" fontSize={"20px"} textAlign={"center"} fontWeight={"bold"}>
+                Tivemos alguns outros cases de sucesso onde ajudamos ideias a sairem do papel.
+              </Text>
+            </Flex>
+
+            {/*📷*/}
+            <Flex justify={"center"}>
+              <Box w="90%">
+                <Img src="/Line Space Design/Group 65.png" />
+              </Box>
+            </Flex>
+
+            {/*💬*/}
+            <Flex justify={"center"} mt="60px">
+              <Text w="80%" fontSize={"20px"} textAlign={"center"}>
+                  Foi uma jornada muito divertida. Tenho certeza que conseguimos ajudar diversas pessoas através do poder do design.
+              </Text>
+            </Flex>
+
+
           </ModalBody>
 
           <ModalFooter>
