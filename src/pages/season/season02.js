@@ -92,7 +92,7 @@ export default function S02() {
               <Modal isOpen={isOpen} onClose={onClose} size={"6xl"}>
                 <ModalOverlay />
 
-                <ModalContent borderRadius={"10px"} h="440%">
+                <ModalContent borderRadius={"10px"} h="460%">
                   <ModalCloseButton />
 
                   {/* Conteúdo */}

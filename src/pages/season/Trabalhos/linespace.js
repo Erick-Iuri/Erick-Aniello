@@ -123,7 +123,7 @@ export default function T02() {
             </Flex>
 
             {/*💬*/}
-            <Flex justify={"center"} mt="60px">
+            <Flex justify={"center"} mt="10px">
               <Text w="80%" fontSize={"20px"} textAlign={"center"}>
                   Foi uma jornada muito divertida. Tenho certeza que conseguimos ajudar diversas pessoas através do poder do design.
               </Text>
