@@ -15,11 +15,18 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
+/* Animações */
+import { motion, isValidMotionProp } from "framer-motion";
+
 export default function S01() {
   return (
     <>
       <Flex justify={"center"}>
         <Flex
+         as={motion.div}
+         transition={"1,5s"}
+         initial={{ opacity: 0, scale: 0.5 }}
+         animate={{ opacity: 1, scale: 1 }}
           m="20px"
           w="1400px"
           justify={"center"}

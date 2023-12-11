@@ -28,7 +28,11 @@ export default function S02() {
 
   return (
     <>
-      <Flex justify={"center"}>
+      <Flex justify={"center"}
+      as={motion.div}
+      transition={"1,5s"}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}>
         <Flex
           m="10px"
           w="1400px"
@@ -379,7 +383,12 @@ export default function S02() {
       </Flex>
 
       {/* Linha Decorativa "Fim" */}
-      <Flex justify={"center"}>
+      <Flex 
+      as={motion.div}
+      transition={"1,5s"}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      justify={"center"}>
         <Flex m="20px" w="1400px" justify={"space-between"}>
           <Box
             mt="17px"

@@ -5,11 +5,17 @@ import React from "react";
 /* Hamburguer menu */
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 
+/* Animações */
+import { motion, isValidMotionProp } from "framer-motion";
+
 export default function Navbar() {
   return (
     <>
       <Flex justify={"center"}>
         <Flex
+          as={motion.div}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
           m="20px"
           w="1400px"
           fontFamily={"Roboto"}
@@ -19,11 +25,22 @@ export default function Navbar() {
             align={"center"}
             display={{ base: "none", sm: "none", md: "flex" }}
           >
-           <Link href="https://github.com/Erick-Iuri" target="_blank" ><Img w="20px" h="20px" mr="10px" src="/icons/github.png" /></Link>
-           <Link href="https://www.linkedin.com/in/erick-aniello-49953b163/" target="_blank"> <Img w="20px" h="20px" src="/icons/logo In white 1.png" /></Link>
+            <Link href="https://github.com/Erick-Iuri" target="_blank">
+              <Img w="20px" h="20px" mr="10px" src="/icons/github.png" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/erick-aniello-49953b163/"
+              target="_blank"
+            >
+              {" "}
+              <Img w="20px" h="20px" src="/icons/logo In white 1.png" />
+            </Link>
           </Flex>
 
           <Flex
+            as={motion.div}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
             align={"center"}
             justify={"space-between"}
             gap={6}
@@ -40,7 +57,7 @@ export default function Navbar() {
               fontWeight={"bold"}
               transition={"0,5s"}
               _hover={{
-                bg:"#006EF5",
+                bg: "#006EF5",
               }}
               _active={{
                 bg: "grey",
@@ -50,49 +67,56 @@ export default function Navbar() {
             </Button>
 
             <Link href="/icons">
-            <Button
-              fontSize={"14px"}
-              fontWeight={"bold"}
-              h="30px"
-              pl="40px"
-              pr="40px"
-              borderRadius={"30px"}
-              bg="black"
-              color="white"
-              transition={"0,5s"}
-              _hover={{
-                bg: "#006EF5",
-              }}
-              _active={{
-                bg: "grey",
-              }}
-            >
-              Icons
-            </Button></Link>  
+              <Button
+                fontSize={"14px"}
+                fontWeight={"bold"}
+                h="30px"
+                pl="40px"
+                pr="40px"
+                borderRadius={"30px"}
+                bg="black"
+                color="white"
+                transition={"0,5s"}
+                _hover={{
+                  bg: "#006EF5",
+                }}
+                _active={{
+                  bg: "grey",
+                }}
+              >
+                Icons
+              </Button>
+            </Link>
 
             <Link href="/sobre">
-           <Button
-              fontSize={"14px"}
-              fontWeight={"bold"}
-              h="30px"
-              pl="40px"
-              pr="40px"
-              borderRadius={"30px"}
-              bg="black"
-              color="white"
-              transition={"0,5s"}
-              _hover={{
-                bg: "#006EF5",
-              }}
-              _active={{
-                bg: "grey",
-              }}
-            > 
-              Sobre
-            </Button></Link>
+              <Button
+                fontSize={"14px"}
+                fontWeight={"bold"}
+                h="30px"
+                pl="40px"
+                pr="40px"
+                borderRadius={"30px"}
+                bg="black"
+                color="white"
+                transition={"0,5s"}
+                _hover={{
+                  bg: "#006EF5",
+                }}
+                _active={{
+                  bg: "grey",
+                }}
+              >
+                Sobre
+              </Button>
+            </Link>
           </Flex>
 
-          <Flex display={{ base: "none", sm: "none", md: "flex" }}>
+          <Flex
+            as={motion.div}
+            initial={{ scale: 0 }}
+            animate={{ rotate: 360, scale: 1 }}
+            display={{ base: "none", sm: "none", md: "flex" }}
+          >
             <Img w="50px" h="50px" src="/icons/foto.png" />
           </Flex>
 
@@ -101,13 +125,24 @@ export default function Navbar() {
             display={{ base: "block", sm: "block", md: "none" }}
           >
             <Menu>
-              <MenuButton as={Button} bg="none" _active={{ bg:"white"}} _hover={{bg:"none"}}>
-                <Img src="/icons/Group 60.png" w="30px" h="20px"/>
+              <MenuButton
+                as={Button}
+                bg="none"
+                _active={{ bg: "white" }}
+                _hover={{ bg: "none" }}
+              >
+                <Img src="/icons/Group 60.png" w="30px" h="20px" />
               </MenuButton>
               <MenuList bg="black" borderRadius={"10px"} border="none">
-                <MenuItem bg="black" color={"white"} fontFamily={"Roboto"}>Projetos</MenuItem>
-                <MenuItem bg="black" color={"white"} fontFamily={"Roboto"}>Icons</MenuItem>
-                <MenuItem bg="black" color={"white"} fontFamily={"Roboto"}>Sobre</MenuItem>
+                <MenuItem bg="black" color={"white"} fontFamily={"Roboto"}>
+                  Projetos
+                </MenuItem>
+                <MenuItem bg="black" color={"white"} fontFamily={"Roboto"}>
+                  Icons
+                </MenuItem>
+                <MenuItem bg="black" color={"white"} fontFamily={"Roboto"}>
+                  Sobre
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>

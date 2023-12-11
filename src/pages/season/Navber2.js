@@ -15,10 +15,18 @@ import T02 from "./Trabalhos/linespace";
 /* Hamburguer menu */
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 
+/* Animações */
+import { motion, isValidMotionProp } from "framer-motion";
+
 export default function Navbar2() {
   return (
     <>
-      <Flex justify={"center"}>
+      <Flex 
+      as={motion.div}
+      transition={"1,5s"}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      justify={"center"}>
         <Flex
           m="20px"
           w="1400px"
@@ -148,7 +156,11 @@ export default function Navbar2() {
 
       {/* Sobre menus */}
 
-      <Flex justify={"center"}>
+      <Flex justify={"center"}
+      as={motion.div}
+      transition={"1,5s"}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}>
         <Flex
           m="20px"
           w="1400px"
