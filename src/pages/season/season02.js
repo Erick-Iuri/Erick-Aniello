@@ -172,11 +172,11 @@ export default function S02() {
                     {/*📷*/}
                     <Flex justify={"center"}>
                       <Box
-                        bgImage={"/Projeto fim/Biblioteca 1.png"}
+                        bgImage={"/Projeto fim/pc.png"}
                         bgSize={"cover"}
                         bgPosition={"center"}
                         borderRadius={"10px"}
-                        w="100%"
+                        w="80%"
                         h="610px"
                       ></Box>
                     </Flex>
@@ -247,21 +247,15 @@ export default function S02() {
                         </Flex>
                       </Flex>
                     </Flex>
+
                     {/*📷*/}
                     <Flex justify={"center"}>
-                      <Box
-                        bgImage={"/Projeto fim/wireframe.png"}
-                        bgSize={"cover"}
-                        bgPosition={"center"}
-                        borderRadius={"10px"}
-                        w="100%"
-                        h="630px"
-                      ></Box>
+                        <Img w="80%" src="/Projeto fim/wireframes.png" />
                     </Flex>
 
                     {/*💬*/}
                     <Flex mb="10px" w="100%" justify={"center"}>
-                      <Flex w="60%" ml="55px" mt="10px">
+                      <Flex w="100%" ml="55px" mt="10px">
                         <Flex mb="10px">
                           <Flex direction={"column"} justify={"center"}>
                             <Text
@@ -292,28 +286,24 @@ export default function S02() {
                         </Flex>
                       </Flex>
                     </Flex>
+
                     {/*📷*/}
-                    <Flex justify={"center"}>
-                      <Box
-                        bgImage={"/Projeto fim/Perfil.png"}
-                        bgSize={"cover"}
-                        bgPosition={"center"}
-                        borderRadius={"10px"}
-                        w="100%"
-                        h="610px"
-                      ></Box>
+                    <Flex mb="10px" justify={"center"}>
+                        <Img w="80%" src="/Projeto fim/Perfil.png" />
                     </Flex>
 
                     {/*📷*/}
-                    <Flex justify={"center"} mt="20px">
-                      <Box
-                        bgImage={"/Projeto fim/Biblioteca.png"}
-                        bgSize={"cover"}
-                        bgPosition={"center"}
-                        borderRadius={"10px"}
-                        w="100%"
-                        h="610px"
-                      ></Box>
+                    <Flex mb="10px" justify={"center"}>
+                        <Img w="80%" src="/Projeto fim/Biblioteca 1.png" />
+                    </Flex>
+
+                    {/*📷*/}
+                    <Flex mb="10px" justify={"center"}>
+                        <Img w="80%" src="/Projeto fim/Biblioteca.png" />
+                    </Flex>
+
+                    <Flex mb="10px" justify={"center"}>
+                        <Img w="80%" src="/Projeto fim/Loja 1.png" />
                     </Flex>
 
                     {/*💬*/}
