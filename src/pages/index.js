@@ -1,20 +1,18 @@
-import { Button, Flex, Text, Img, Box } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Text,
+} from "@chakra-ui/react";
 
 import React from "react";
 
-/* Nav bar */
-import Navbar from "./season/navber";
-import S01 from "./season/season01";
-import S02 from "./season/season02";
+/* this is the S01 import */
+import S01 from "./seasons/season01";
 
 export default function Index() {
-  return(
-    <>
-      <Navbar />
-
-      <S01/>
-
-      <S02 />
-    </>
+  return (
+   <>
+    <S01 />
+   </>
   );
 }
