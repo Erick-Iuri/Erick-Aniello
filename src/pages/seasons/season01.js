@@ -1,11 +1,20 @@
 /* chakra content */
-import { Button, Flex, Img, Text, Box } from "@chakra-ui/react"; /* */
+import { Button, Flex, Img, Text, Box, Link } from "@chakra-ui/react"; /* */
 
 import React from "react";
 
-import T02 from "./Trabalhos/linespace";
+/* t02 */
+import T02 from "./trabalhos/linespace";
 
-import { useDisclosure } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+
+import Card1 from "./animationcard";
+
+import T01 from "./trabalhos/ubisoft";
+
+import T03 from "./trabalhos/youtubemusic";
+
+/* Popover */
 
 import {
   Popover,
@@ -19,503 +28,332 @@ import {
   PopoverAnchor,
 } from "@chakra-ui/react";
 
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-} from "@chakra-ui/react";
-
-import Link from "next/link";
-
-import { motion } from 'framer-motion'
-
 export default function S01() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
     <>
-      {/* Animação de fundo 👌*/}
+      {/* Top Blue Bar */}
       <Flex
-      overflow={"hidden"}
-      h={"100%"} 
-      w="100%"
-      bg={"black"}
-      direction={"column"}>
-        
-        {/* Container principal */}
-        <Flex
-          as={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          w="100%"
-          h="100%"
-          p="40px 70px 20px 70px"
-          direction={"column"}
-        >
-          {/* Navbar */}
-          <Flex color={"white"} w="100%" justify={"space-between"}>
-            <Flex w="200px" h="20px">
-              <Img src="/icons/Erick Aniello.png" />
-            </Flex>
-
-            <Flex>
-              <Flex cursor={"pointer"}>
-                <Popover>
-                  <PopoverTrigger>
-                    <Img mr="20px" w="30px" src="/icons/pontos.png" />
-                  </PopoverTrigger>
-
-                  <PopoverContent  borderRadius={"0px"}>
-                    <PopoverFooter
-                      color={"black"}
-                      fontSize={"15px"}
-                      borderColor={"white"}
-                    >
-                      Clicar no botão "E-mail" vai fazer seu E-mail abrir como em
-                      um truque de mágica! 🎩🪄
-                    </PopoverFooter>
-                  </PopoverContent>
-                </Popover>
-              </Flex>
-
-
-              <Link href="mailto:iurierick@gmail.com">
-              <Button
-                _hover={{
-                  bg: "black",
-                  border: "1px",
-                  borderColor: "white",
-                  color: "white",
-                }}
-                h="30px"
-                w="130px"
-                borderRadius={"30px"}
-                bg="white"
-                color={"black"}
-              >
-                E-mail
-              </Button>
-              </Link>
-            </Flex>
+        _hover={{
+          bg: "#053C8F",
+        }}
+        align={"center"}
+        justify={"center"}
+        h="60px"
+        bg="#146EF5"
+        w="100%"
+      >
+        <Flex w="1300px" color={"white"} justify={"space-between"} m="30px">
+          <Flex>
+            Aprimorar sua presença digital? Me contrate por e-mail:
+            <Link ml="5px" href="mailto:iurierick@gmail.com">
+              iurierick@gmail.com
+            </Link>
           </Flex>
-
-          {/* Sessão de trabalhos */}
-          <Flex mt="90px" color={"white"} justifyContent={"center"}>
-            <Img w="120px" src="/icons/Trabalhos.png" />
-          </Flex>
-
-          <Flex justify={"center"}>
-            <Flex w="1600px" justify={"center"} direction={"row"}>
-              {/* Redes */}
-
-              <Flex justify={"center"} direction={"column"}>
-                <Link href="https://github.com/Erick-Iuri" target="_blank">
-                <Img mb="10px" w="35px" src="/icons/Github branco.png" /></Link>
-                
-                <Link href="https://www.linkedin.com/in/erick-aniello-49953b163/" target="_blank">
-                <Img w="35px" src="/icons/Linkeding branco.png" /></Link>
-              </Flex>
-
-              {/* Trabalhos */}
-
-              <Flex
-                w="100%"
-                justify={"center"}
-                gap={3}
-                m="20px"
-                direction={{ xl: "row", md: "column", base: "column" }}
-              >
-                {/* Line space design */}
-                <Flex
-                  w="100%"
-                  h="400px"
-                  bg="black"
-                  bgImage="/Line Space Design/Cover Line space.jpg"
-                  bgRepeat={"none"}
-                  bgPosition={"center"}
-                  bgSize={"cover"}
-                  cursor="pointer"
-                >
-                  <Flex w="100%">
-                    <T02 />
-                  </Flex>
-                </Flex>
-
-                {/* Ubisoft Projeto */}
-                <Flex
-                  w="100%"
-                  h="400px"
-                  justify={"center"}
-                  onClick={onOpen}
-                  cursor={"pointer"}
-                >
-                  <Flex
-                    w="100%"
-                    h="100%"
-                    bgImage="/Projeto fim/cover 1.jpg"
-                    bgRepeat={"none"}
-                    bgPosition={"center"}
-                    bgSize={"cover"}
-                  >
-                    <Flex
-                      _hover={{
-                        opacity: "1",
-                        transition: "0.3s",
-                      }}
-                      opacity={"0"}
-                      bgGradient="linear(to-b, transparent 50%, black 100%)"
-                      direction={"column"}
-                      justify={"end"}
-                      p="20px"
-                      w="100%"
-                      h="100%"
-                    >
-                      <Text color={"white"} fontWeight={"bold"} fontSize={"20px"}>
-                        {" "}
-                        Projeto Ubisoft Connect{" "}
-                      </Text>
-                      <Text color={"white"} fontSize="13px">
-                        {" "}
-                        Redesign do Aplicativo Ubisoft Connect para uma
-                        Experiência Aprimorada do Usuário (UX Design){" "}
-                      </Text>
-                    </Flex>
-                  </Flex>
-
-                  {/* Modal menu */}
-                  <Modal isOpen={isOpen} onClose={onClose} size={"6xl"}>
-                    <ModalOverlay />
-
-                    <ModalContent h="auto">
-                      <ModalCloseButton />
-
-                      {/* Conteúdo */}
-                      <ModalBody>
-                        {/*💬*/}
-                        <Flex mb="10px" ml="55px" justify={"start"}>
-                          <Flex mt="100px">
-                            <Flex mb="10px">
-                              <Img
-                                w="50px"
-                                h="50px"
-                                mr="10px"
-                                src="/icons/Logo Erick.png"
-                              />
-
-                              <Flex direction={"column"}>
-                                <Text fontWeight={"bold"}>
-                                  Ubisoft Connect Redesign
-                                </Text>
-                                <Text>Erick Aniello | UI / UX Designer </Text>
-                              </Flex>
-                            </Flex>
-                          </Flex>
-                        </Flex>
-
-                        {/*📷*/}
-                        <Flex justify={"center"}>
-                          <Box
-                            bgImage={"/Projeto fim/cover 1.jpg"}
-                            bgSize={"cover"}
-                            bgPosition={"center"}
-                            w="90%"
-                            h="500px"
-                          ></Box>
-                        </Flex>
-
-                        {/*💬*/}
-                        <Flex mb="10px" justify={"center"}>
-                          <Flex w="70%" mt="10px" mb="10px">
-                            <Flex direction={"column"} justify={"center"}>
-                              <Text
-                                mt="14px"
-                                fontSize={"19px"}
-                                textAlign={"center"}
-                                fontWeight={"bold"}
-                                color="black"
-                              >
-                                Redesign do Aplicativo Ubisoft Connect para uma
-                                Experiência Aprimorada do Usuário (UX Design)
-                              </Text>
-
-                              <Text
-                                mt="20px"
-                                fontSize={"17px"}
-                                textAlign={"center"}
-                                color="black"
-                              >
-                                Esse projeto foi uma iniciativa pessoal, para
-                                aprimorar significativamente a experiência do
-                                usuário (UX) do aplicativo, que identifiquei como
-                                uma área de oportunidade após explorar a versão
-                                beta. Percebi que havia espaço para melhorias
-                                substanciais no design e na usabilidade, e isso me
-                                inspirou a criar um projeto dedicado ao
-                                aprimoramento do Ubisoft Connect.
-                              </Text>
-                            </Flex>
-                          </Flex>
-                        </Flex>
-
-                        {/*📷*/}
-                        <Flex justify={"center"}>
-                          <Box
-                            bgImage={"/Projeto fim/pc.png"}
-                            bgSize={"cover"}
-                            bgPosition={"center"}
-                            borderRadius={"10px"}
-                            w="80%"
-                            h="610px"
-                          ></Box>
-                        </Flex>
-
-                        {/*💬*/}
-                        <Flex mb="10px" w="100%" justify={"center"}>
-                          <Flex w="60%" ml="55px" mt="10px">
-                            <Flex mb="10px">
-                              <Flex direction={"column"} justify={"center"}>
-                                <Text
-                                  mt="14px"
-                                  fontSize={"19px"}
-                                  textAlign={"center"}
-                                  fontWeight={"bold"}
-                                  color="black"
-                                >
-                                  Os principais objetivos do projeto incluíam:
-                                </Text>
-
-                                <Text
-                                  mt="20px"
-                                  fontSize={"17px"}
-                                  textAlign={"start"}
-                                  fontWeight={"light"}
-                                  color="black"
-                                >
-                                  1 - Melhorar a Navegação: Tornar a navegação no
-                                  aplicativo mais fluida e intuitiva.
-                                </Text>
-
-                                <Text
-                                  mt="20px"
-                                  fontSize={"17px"}
-                                  textAlign={"start"}
-                                  fontWeight={"light"}
-                                  color="black"
-                                >
-                                  2 - Aprimorar a Estética: Modernizar o design,
-                                  tornando-o mais atraente e alinhado às
-                                  tendências de design atuais.
-                                </Text>
-
-                                <Text
-                                  mt="20px"
-                                  fontSize={"17px"}
-                                  textAlign={"start"}
-                                  fontWeight={"light"}
-                                  color="black"
-                                >
-                                  3 - Otimizar a Usabilidade: Simplificar os
-                                  processos para garantir que os usuários atinjam
-                                  seus objetivos de forma eficiente.
-                                </Text>
-
-                                <Text
-                                  mt="20px"
-                                  fontSize={"17px"}
-                                  textAlign={"start"}
-                                  fontWeight={"light"}
-                                  color="black"
-                                >
-                                  4 - Integrar Feedback dos Usuários: Incorporar
-                                  sugestões e feedback dos usuários beta para
-                                  garantir que as necessidades reais dos usuários
-                                  fossem consideradas.
-                                </Text>
-                              </Flex>
-                            </Flex>
-                          </Flex>
-                        </Flex>
-
-                        {/*📷*/}
-                        <Flex justify={"center"}>
-                          <Img w="80%" src="/Projeto fim/wireframes.png" />
-                        </Flex>
-
-                        {/*💬*/}
-                        <Flex mb="10px" w="100%" justify={"center"}>
-                          <Flex w="100%" ml="55px" mt="10px">
-                            <Flex mb="10px">
-                              <Flex direction={"column"} justify={"center"}>
-                                <Text
-                                  mt="14px"
-                                  fontSize={"19px"}
-                                  textAlign={"center"}
-                                  fontWeight={"bold"}
-                                  color="black"
-                                >
-                                  Metodologia:
-                                </Text>
-
-                                <Text
-                                  mt="20px"
-                                  fontSize={"17px"}
-                                  textAlign={"center"}
-                                  color="black"
-                                >
-                                  O processo de Redesign envolveu várias etapas,
-                                  começando com a análise aprofundada da versão
-                                  beta do Ubisoft Connect. Realizei pesquisas
-                                  adicionais para entender as expectativas dos
-                                  usuários e as melhores práticas de UX design. A
-                                  criação de wireframes detalhados precedeu a fase
-                                  de design, onde busquei uma estética moderna e
-                                  coesa.
-                                </Text>
-                              </Flex>
-                            </Flex>
-                          </Flex>
-                        </Flex>
-
-                        {/*📷*/}
-                        <Flex mb="10px" justify={"center"}>
-                          <Img w="80%" src="/Projeto fim/Perfil.png" />
-                        </Flex>
-
-                        {/*📷*/}
-                        <Flex mb="10px" justify={"center"}>
-                          <Img w="80%" src="/Projeto fim/Biblioteca 1.png" />
-                        </Flex>
-
-                        {/*📷*/}
-                        <Flex mb="10px" justify={"center"}>
-                          <Img w="80%" src="/Projeto fim/Biblioteca.png" />
-                        </Flex>
-
-                        <Flex mb="10px" justify={"center"}>
-                          <Img w="80%" src="/Projeto fim/Loja 1.png" />
-                        </Flex>
-
-                        {/*💬*/}
-                        <Flex mb="10px" w="100%" justify={"center"}>
-                          <Flex w="60%" ml="55px" mt="10px">
-                            <Flex mb="10px">
-                              <Flex direction={"column"} justify={"center"}>
-                                <Text
-                                  mt="14px"
-                                  fontSize={"19px"}
-                                  textAlign={"center"}
-                                  fontWeight={"bold"}
-                                  color="black"
-                                >
-                                  Conclusão:
-                                </Text>
-
-                                <Text
-                                  mt="20px"
-                                  fontSize={"17px"}
-                                  textAlign={"center"}
-                                  color="black"
-                                >
-                                  Em resumo, este Redesign do Ubisoft Connect
-                                  representa meu compromisso com a excelência em
-                                  UX design. Estou confiante de que as melhorias
-                                  implementadas não apenas atendem às expectativas
-                                  dos usuários, mas também contribuem para uma
-                                  experiência mais atraente e envolvente. Estou
-                                  aberto a feedback e ansioso para discutir como
-                                  esse projeto pode continuar a evoluir.
-                                </Text>
-                              </Flex>
-                            </Flex>
-                          </Flex>
-                        </Flex>
-                      </ModalBody>
-
-                      <ModalFooter>
-                        <Button
-                          colorScheme="red"
-                          borderRadius={"30px"}
-                          mr={3}
-                          onClick={onClose}
-                        >
-                          Close
-                        </Button>
-                      </ModalFooter>
-                    </ModalContent>
-                  </Modal>
-                </Flex>
-              </Flex>
-            </Flex>
-          </Flex>
-
-          {/* Linha final */}
-          <Flex
-            mt="90px"
-            w="100%"
-            h="1px"
-            border={"1px"}
-            borderColor={"white"}
-          ></Flex>
-        </Flex>
-
-        {/* linha de texto */}
-
-        <Flex 
-        as={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        w="100%" p="0 70px 40px 70px">
-          <Flex justify={"center"}>
-            <Flex color="white" fontSize={"15px"} w="33%">
-              <Text w="">
-                <b>Erick Aniello</b> é um <b>UX Design, Front-end developer</b>{" "}
-                com base em são paulo, especialista em criar interfaces funcionais
-                e elegantes para produtos online.{" "}
-              </Text>
-            </Flex>
-
-            <Flex w="33%" justify={"center"} align={"center"}>
-              <Img h="120px" w="auto" src="/icons/Logo Erick branco.png" />
-            </Flex>
-
-            <Flex w="31%" fontSize={"15px"} direction={"column"} color="white">
-              <Text fontWeight={"bold"} mb="10px">
-                Quais tipos de problema você resolve?
-              </Text>
-              <Text>
-                Resolvo problemas relacionados à experiência do usuário. Por
-                exemplo, em um aplicativo de compras, meu trabalho é tornar a
-                interface mais fácil de usar, ajudando os usuários a tomar
-                decisões, como escolher entre 'Seguir' ou 'Finalizar'.
-              </Text>
-            </Flex>
+          <Flex fontWeight="bold" pr="20px">
+            Vamos começar?{" "}
+            <Img
+              ml="10px"
+              w="10px"
+              h="10px"
+              mt="10px"
+              src="/icons/Arrow 1.png"
+            />
           </Flex>
         </Flex>
       </Flex>
 
-        {/* Ultima linha */}
-        <Flex 
-        p="0 20px 0 20px"
-        w="100%" h="20px" justifyContent={"space-between"}>
+      {/* Container principal */}
+      <Flex
+        direction={"column"}
+        align={"center"}
+        w="100%"
+        h="3200px"
+        bg="black"
+      >
+        {/* Navbar */}
+        <Flex
+          justify={"center"}
+          align={"center"}
+          borderBottom={"1px"}
+          borderColor={"#646464"}
+          h="70px"
+          w="100%"
+        >
+          <Flex m="30px" w="1300px" justify={"space-between"} h="30px">
+            {/* Container 1 */}
+            <Flex align={"center"} color={"white"}>
+              <Flex pr="15px" fontWeight={"bold"} direction={"row"}>
+                <Flex
+                  mt="6px"
+                  mr="3px"
+                  bg="#146EF5"
+                  w="13px"
+                  h="13px"
+                  borderRadius={"50%"}
+                ></Flex>
+                Erick Aniello
+              </Flex>
+              <Flex pr="15px">
+                <Popover>
+                  <PopoverTrigger>
+                    <Button
+                      _hover={{
+                        bg: "black",
+                      }}
+                      bg="black"
+                      color={"white"}
+                    >
+                      Sobre mim
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent>
+                    <PopoverArrow />
+                    <PopoverCloseButton />
+                    <PopoverBody color={"black"}>
+                      <b>Erick Aniello</b> é um UX Design, Front-end developer com base
+                      em são paulo, especialista em criar interfaces funcionais
+                      e elegantes para produtos online.
+                    </PopoverBody>
+                  </PopoverContent>
+                </Popover>
+              </Flex>
+              <Flex pr="15px"></Flex>
+            </Flex>
 
-          <Flex>
-            <Text>
-              V.0.1 Brasil, São Paulo SP UI & UX design Front-end developer
+            {/* Container 2 */}
+            <Flex align={"center"}>
+              <Link href="https://github.com/Erick-Iuri" target="_blank">
+                <Img mr="15px" src="/icons/github.png" w="20px" h="20px" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/erick-aniello-49953b163/"
+                target="_blank"
+              >
+                <Img
+                  mr="15px"
+                  src="/icons/logo In white.png"
+                  w="20px"
+                  h="20px"
+                />
+              </Link>
+            </Flex>
+
+            {/* Container 3 */}
+            <Flex align={"center"}>
+              <Link href="mailto:iurierick@gmail.com">
+                <Button
+                  _hover={{
+                    bg: "#053C8F",
+                  }}
+                  _active={{
+                    bg: "#76ADFF",
+                  }}
+                  p="25px 30px"
+                  borderRadius={"5px"}
+                  fontSize={"15px"}
+                  fontWeight={"bold"}
+                  color={"white"}
+                  bgColor={"#146EF5"}
+                  mr="15px"
+                >
+                  Me mande um E-mail
+                </Button>
+              </Link>
+            </Flex>
+          </Flex>
+        </Flex>
+
+        {/* H1 */}
+        <Flex justify={"center"} h="70px" w="100%">
+          <Flex w="1300px" justify={"start"} color={"white"} m="30px">
+            <Flex direction={"column"}>
+              <Text w="60%" fontWeight={"bold"} fontSize={"46px"}>
+                Explore meu portfólio e descubra minha abordagem única.
+              </Text>
+              <Text fontWeight={"light"} fontSize={"24px"}>
+                conheça meus trabalhos aqui.
+              </Text>
+            </Flex>
+          </Flex>
+        </Flex>
+
+        {/* Tilt Card 1 */}
+        <Flex align={"center"} justify={"center"} mt="230px">
+          <Card1 />
+        </Flex>
+
+        {/* H2 */}
+        <Flex color={"white"} direction={"column"}>
+          <Flex fontSize={"36px"} fontWeight={"bold"}>
+            Minhas habilidades com programação e design.
+          </Flex>
+          <Flex
+            justify={"center"}
+            fontSize={"26px"}
+            fontWeight={"thin"}
+            w="100%"
+            textAlign={"center"}
+          >
+            <Text w="70%">
+              Aqui estão algumas das minhas ferramentas para juntar forçars no
+              seu projeto.
+            </Text>
+          </Flex>
+        </Flex>
+
+        {/* Skills*/}
+        <Flex mt="30px">
+          <Flex
+            _hover={{
+              bg: "#FF6B00",
+              filter: "drop-shadow(6px -11px 206.1px rgba(255, 107, 0, 0.63))",
+            }}
+            transition={"0.9s"}
+            border="1px"
+            borderColor={"#FF6B00"}
+            mr="10px"
+            w="280px"
+            h="360px"
+            bg="black"
+            align={"center"}
+            justify={"center"}
+          >
+            <Img w="150px" h="150px" src="/icons/Photo.png" />
+          </Flex>
+          <Flex
+            border="1px"
+            borderColor={"#EE1D36"}
+            _hover={{
+              bg: "#EE1D36",
+              filter: "drop-shadow(6px -11px 206.1px #EE1D36)",
+            }}
+            transition={"0.9s"}
+            mr="10px"
+            w="280px"
+            h="360px"
+            bg="black"
+            align={"center"}
+            justify={"center"}
+          >
+            <Img w="150px" h="150px" src="/icons/Ilustrator.png" />
+          </Flex>
+
+          <Flex
+            border="1px"
+            borderColor={"#00D722"}
+            _hover={{
+              bg: "#00D722",
+              filter: "drop-shadow(6px -11px 206.1px #00D722)",
+            }}
+            transition={"0.9s"}
+            mr="10px"
+            w="280px"
+            h="360px"
+            bg="black"
+            align={"center"}
+            justify={"center"}
+          >
+            <Img w="150px" h="150px" src="/icons/Chakra UI.png" />
+          </Flex>
+
+          <Flex
+            _hover={{
+              bg: "#146EF5",
+              filter: "drop-shadow(6px -11px 206.1px #146EF5)",
+            }}
+            transition={"0.9s"}
+            border="1px"
+            borderColor={"#146EF5"}
+            w="280px"
+            h="360px"
+            bg="black"
+            align={"center"}
+            justify={"center"}
+          >
+            <Img w="150px" h="150px" src="/icons/React.png" />
+          </Flex>
+        </Flex>
+
+        {/* H3 */}
+        <Flex color={"white"} direction={"column"} mt="50px">
+          <Flex fontSize={"36px"} fontWeight={"bold"}>
+            Trabalhos & Redesigns
+          </Flex>
+        </Flex>
+
+        {/* Re-Design 1 Ubisoft */}
+        <Flex mt="40px" w="1200px" gap={10} justify={"center"}>
+          <Flex pt="20px" direction={"column"} color={"white"} w="665px">
+            <Text fontSize={"20px"} fontWeight={"bold"}>
+              Ubisoft Connect UI & UX DESIGN
+            </Text>
+            <Text mt="10px" fontWeight={"thin"}>
+              Redesign do Aplicativo Ubisoft Connect para uma Experiência
+              Aprimorada do Usuário (UX Design).
             </Text>
           </Flex>
 
-          <Flex>
-            <Text fontWeight={"bold"}>Erick Aniello</Text>
+          <Flex w="100%">
+            <Flex
+              w="100%"
+              h="442px"
+              bgSize={"cover"}
+              bgRepeat={"no-repeat"}
+              bgImage={"/icons/Tela 1 moldura azul.png"}
+            >
+              <T01 />
+            </Flex>
           </Flex>
-        
         </Flex>
 
+        {/* Re-Design 2 Line Space Design */}
+        <Flex mt="40px" w="1200px" gap={10} justify={"center"}>
+          <Flex pt="20px" direction={"column"} color={"white"} w="665px">
+            <Text fontSize={"20px"} fontWeight={"bold"}>
+              Line Space Design.
+            </Text>
+            <Text mt="10px" fontWeight={"thin"}>
+              A Line Space foi meu projeto pessoal de empreendedorismo.
+            </Text>
+          </Flex>
+
+          <Flex w="100%">
+            <Flex
+              w="100%"
+              h="442px"
+              bgSize={"cover"}
+              bgRepeat={"no-repeat"}
+              bgImage={"/icons/LineSpace Borda vermelha.png"}
+            >
+              <T02 />
+            </Flex>
+          </Flex>
+        </Flex>
+
+        {/* Porjeto Re-design youtube Music */}
+        <Flex mt="40px" w="1200px" gap={10} justify={"center"}>
+          <Flex pt="20px" direction={"column"} color={"white"} w="665px">
+            <Text fontSize={"20px"} fontWeight={"bold"}>
+              Youtube Music (App Redesign)
+            </Text>
+            <Text mt="10px" fontWeight={"thin"}>
+              Redesign User Interface do Youtube Music.
+            </Text>
+          </Flex>
+
+          <Flex w="100%">
+            <Flex
+              w="100%"
+              h="442px"
+              bgSize={"cover"}
+              bgRepeat={"no-repeat"}
+              bgImage={"/icons/Group 142.png"}
+            >
+              <T03 />
+            </Flex>
+          </Flex>
+        </Flex>
+      </Flex>
     </>
   );
 }
